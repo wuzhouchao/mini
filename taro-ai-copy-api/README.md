@@ -29,6 +29,30 @@
 
    默认地址：`http://localhost:3000`
 
+## Docker 运行
+
+1. 配置环境变量（与本地运行相同）
+
+   ```bash
+   cp .env.example .env
+   # 编辑 .env，填入 DEEPSEEK_API_KEY
+   ```
+
+2. 构建并启动
+
+   ```bash
+   docker compose up -d
+   ```
+
+   或仅用 Dockerfile 构建并运行：
+
+   ```bash
+   docker build -t taro-ai-copy-api .
+   docker run -d -p 3000:3000 --env-file .env --name taro-ai-copy-api taro-ai-copy-api
+   ```
+
+   服务地址：`http://localhost:3000`，接口与本地一致。
+
 ## 接口
 
 | 方法 | 路径 | 说明 |

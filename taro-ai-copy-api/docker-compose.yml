@@ -1,0 +1,17 @@
+# 文创小新后端 API - Docker Compose
+# 使用: docker compose up -d
+# 需在项目根目录创建 .env 并配置 DEEPSEEK_API_KEY
+
+services:
+  api:
+    build: .
+    image: taro-ai-copy-api:latest
+    container_name: taro-ai-copy-api
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000

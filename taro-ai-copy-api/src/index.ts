@@ -6,7 +6,7 @@ import { createChatCompletion } from './deepseek'
 dotenv.config()
 
 const PORT = Number(process.env.PORT) || 3000
-const DEEPSEEK_API_KEY = "sk-239e9db4375347b58b8afcc018738645"
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 
 const app = express()
 app.use(cors({ origin: true }))
