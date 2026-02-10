@@ -5,8 +5,8 @@ import { createChatCompletion } from './deepseek'
 
 dotenv.config()
 
-const PORT = Number(process.env.TARO_APP_PORT) || 3000
-const DEEPSEEK_API_KEY = process.env.TARO_APP_DEEPSEEK_API_KEY || ''
+const PORT = 3000
+const DEEPSEEK_API_KEY = 'sk-239e9db4375347b58b8afcc018738645'
 
 const app = express()
 app.use(cors({ origin: true }))
